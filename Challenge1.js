@@ -10,7 +10,21 @@
  */
 
 function findChildren(santasList, children) {
-    // Your code
+    let newList = [];
+
+    for (let index = 0; index < santasList.length; index++) {
+        if (children.includes(santasList[i])) {
+            newList.push(santasList[i]);
+        }
+    }
+
+    for (let index = 0; index < children.length; index++) {
+        if (santasList.includes(children[i])) {
+            newList.push(children[i]);
+        }
+    }
+
+    return newList;
 }
 
 let santasList = ["Tom","Errol","Sam","Peter","Jennifer"];
