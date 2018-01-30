@@ -16,3 +16,5 @@ fetch('http://date.jsontest.com/').then(function(res) {
     }).then(function(json) {
         console.log(json);
 });
+
+console.log(new Date().getTime());
