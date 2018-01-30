@@ -10,7 +10,7 @@
  */
 
 function compress(str) {
-    var result,
+    var retStr,
     count = 1,
     i;
 
@@ -18,17 +18,17 @@ function compress(str) {
         return "";
     }
 
-    result = str.charAt(0);
+    retStr = str.charAt(0);
     for (i = 1; i < str.length; i++) {
         if (str.charAt(i) != str.charAt(i-1)) {
-            result += count + str.charAt(i);
+            retStr += count + str.charAt(i);
             count = 1;
         } else {
             count++;
         }
     }
 
-    return result + count;
+    return retStr + count;
 }
 
 console.log("My method: " + compress("aabbbcccccaa"));
@@ -38,3 +38,20 @@ var res = 'aabbbcccccaa'
         return $1 + m.length;
     });
 console.log("Using regex: " + res);
+
+function decompress(str) {
+    var output = "";
+    //encoded.forEach(function(pair){ output += new Array(1+pair[0]).join(pair[1]) })
+
+    for (let i = 0; i < str.length; i++) {
+        
+        if(i % 2 == 0) {
+
+            output += str.charAt(i).repeat(parseInt(str.charAt(i+1)));
+        }
+    }
+
+    return output;
+}
+
+console.log("Decompressed: " + decompress(compress("aabbbcccccaa")));
