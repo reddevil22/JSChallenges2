@@ -12,17 +12,10 @@
 function findChildren(santasList, children) {
     let newList = [];
     for (let index = 0; index < santasList.length; index++) {
-        if (children.includes(santasList[index])) {
-            newList.push(santasList[index]);
+        if (children.includes(santasList[index])) {  // Check if children array includes element of santasList at position 'index'
+            newList.push(santasList[index]);         // Adds element to new array if found in children and santasList
         }
     }
-
-    /* for (let index = 0; index < children.length; index++) {
-        if (santasList.includes(children[index])) {
-            newList.push(children[index]);
-        }
-    } */
-
     return newList;
 }
 
