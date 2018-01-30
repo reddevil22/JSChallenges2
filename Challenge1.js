@@ -11,18 +11,17 @@
 
 function findChildren(santasList, children) {
     let newList = [];
-
     for (let index = 0; index < santasList.length; index++) {
-        if (children.includes(santasList[i])) {
-            newList.push(santasList[i]);
+        if (children.includes(santasList[index])) {
+            newList.push(santasList[index]);
         }
     }
 
-    for (let index = 0; index < children.length; index++) {
-        if (santasList.includes(children[i])) {
-            newList.push(children[i]);
+    /* for (let index = 0; index < children.length; index++) {
+        if (santasList.includes(children[index])) {
+            newList.push(children[index]);
         }
-    }
+    } */
 
     return newList;
 }
@@ -30,5 +29,9 @@ function findChildren(santasList, children) {
 let santasList = ["Tom","Errol","Sam","Peter","Jennifer"];
 let children = ["Errol", "Peter", "Jennifer"];
 
+console.log(findChildren(santasList, children));
+
 santasList = ["Tom","Errol","Sam", "mistyMay","Peter","Jennifer", "macMerphy"];
 children = ["Errol", "Peter", "jennifer", "mistymay", "MacMerphy"];
+
+console.log(findChildren(santasList, children));
