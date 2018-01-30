@@ -26,7 +26,8 @@ function orchestrateUsers(users) {
 }
 
 function searchUsers(orchestratedUsers, userTypes, property, value) {
-    // Add code here
+    let filteredUsers = orchestratedUsers.filter(orchestratedUsers.value);
+    return filteredUsers;
 }
 
 let users = [
@@ -68,3 +69,4 @@ let users = [
 ];
 
 console.log(orchestrateUsers(users));
+console.log(searchUsers(orchestrateUsers(users)));
