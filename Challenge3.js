@@ -11,8 +11,7 @@
 
 var fetch = require("node-fetch");
 
-fetch('http://date.jsontest.com/')
-    .then(function(res) {
+fetch('http://date.jsontest.com/').then(function(res) {
         return res.json();
     }).then(function(json) {
         console.log(json);
