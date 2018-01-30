@@ -10,47 +10,6 @@
  */
 
 function compress(str) {
-    let count = 1;
-    let index = 0;
-    let retStr = '';
-
-    /*for (let index = 0; index < str.length; index++) {
-        //console.log("str.charAt(" + index + "): " + str.charAt(index) + "\tstr.charAt(" + parseInt(index + count) + "): " + str.charAt(index + count) + "\tcount: " + count);
-        if (str.charAt(index) == str.charAt(index + count)) {
-            count ++;
-        }
-        else {
-            console.log("retStr before: " + retStr);
-            retStr += str.charAt(index) + count;
-            console.log("retStr after: " + retStr + "\n");
-            count = 1;
-        }
-    }*/
-
-    for (let i = 0; i < str.length; i++) {
-        if (str.charAt(index) == str.charAt(index + count)) {
-            count ++;
-        }
-        else
-        {
-            retStr += str.charAt(index) + count;
-            index = count;
-            count = 1;
-        }
-    }
-
-    return retStr;
-}
-
-console.log(compress("aabbbcccccaa"));
-
-var res = 'aabbbcccccaa'
-    .replace(/(.)\1*/g, function(m, $1) {
-        return $1 + m.length;
-    });
-console.log(res);
-
-function getCharCount(str) {
     var result,
     count = 1,
     i;
@@ -72,4 +31,10 @@ function getCharCount(str) {
     return result + count;
 }
 
-console.log(getCharCount("aabbbcccccaa"));
+console.log("My method: " + compress("aabbbcccccaa"));
+
+var res = 'aabbbcccccaa'
+    .replace(/(.)\1*/g, function(m, $1) {
+        return $1 + m.length;
+    });
+console.log("Using regex: " + res);
