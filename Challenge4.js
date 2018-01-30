@@ -13,7 +13,7 @@
 /* From https://www.consolelog.io/group-by-in-javascript */
 Array.prototype.groupBy = function(prop) {
     return this.reduce(function(groups, item) {
-        var val = item[prop];
+        let val = item[prop];
         groups[val] = groups[val] || [];
         groups[val].push(item);
         return groups;
@@ -69,4 +69,4 @@ let users = [
 ];
 
 console.log(orchestrateUsers(users));
-console.log(searchUsers(orchestrateUsers(users)));
+/*console.log(searchUsers(orchestrateUsers(users)));*/
