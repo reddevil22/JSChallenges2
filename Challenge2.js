@@ -60,14 +60,15 @@ function compress(str) {
     let retStr = '';
 
     for (let index = 0; index < str.length; index++) {
+        console.log("str.charAt(" + index + "): " + str.charAt(index) + "\tstr.charAt(" + parseInt(index + count) + "): " + str.charAt(index + count) + "\tcount: " + count);
         if (str.charAt(index) == str.charAt(index + count)) {
-            console.log("str.charAt(" + index + "): " + str.charAt(index) + "\tcount: " + count);
             count ++;
         }
         else {
             console.log("retStr before: " + retStr);
             retStr += str.charAt(index) + count;
             console.log("retStr after: " + retStr + "\n");
+            count = 1;
         }
     }
 
