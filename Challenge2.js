@@ -9,58 +9,13 @@
  * Link to problem: https://kurtosys-prod-eng.atlassian.net/wiki/spaces/GRAD/pages/223871621/Challenge+1+-+Santa+s+Naughty+List
  */
 
-/* function getFrequency(string) {
-    var freq = {};
-    for (var i=0; i<string.length;i++) {
-        var character = string.charAt(i);
-        if (freq[character]) {
-           freq[character]++;
-        } else {
-           freq[character] = 1;
-        }
-    }
-
-    return freq;
-}
-
-function objToString (obj) {
-    var str = '';
-    for (var p in obj) {
-        if (obj.hasOwnProperty(p)) {
-            str += p + '' + obj[p];
-        }
-    }
-    return str;
-}
-
-console.log(objToString(getFrequency("aabbbcccccaa")));
-
-function compress(params) {
-    let str = "";
-
-    for (var i=0; i<params.length;i++) {
-
-    }
-}
-
-function decompress(str) {
-    return str.replace(/(\d+)([a-zA-A])/g, function (match, num, letter) {
-        var ret = '', i;
-        for (i = 0; i < parseInt(num, 10); i++) {
-            ret += letter;
-        }
-        return ret;
-    });
-}
-
-console.log(decompress("g2j2")); */
-
 function compress(str) {
     let count = 1;
+    let index = 0;
     let retStr = '';
 
-    for (let index = 0; index < str.length; index++) {
-        console.log("str.charAt(" + index + "): " + str.charAt(index) + "\tstr.charAt(" + parseInt(index + count) + "): " + str.charAt(index + count) + "\tcount: " + count);
+    /*for (let index = 0; index < str.length; index++) {
+        //console.log("str.charAt(" + index + "): " + str.charAt(index) + "\tstr.charAt(" + parseInt(index + count) + "): " + str.charAt(index + count) + "\tcount: " + count);
         if (str.charAt(index) == str.charAt(index + count)) {
             count ++;
         }
@@ -70,9 +25,51 @@ function compress(str) {
             console.log("retStr after: " + retStr + "\n");
             count = 1;
         }
+    }*/
+
+    for (let i = 0; i < str.length; i++) {
+        if (str.charAt(index) == str.charAt(index + count)) {
+            count ++;
+        }
+        else
+        {
+            retStr += str.charAt(index) + count;
+            index = count;
+            count = 1;
+        }
     }
 
     return retStr;
 }
 
 console.log(compress("aabbbcccccaa"));
+
+var res = 'aabbbcccccaa'
+    .replace(/(.)\1*/g, function(m, $1) {
+        return $1 + m.length;
+    });
+console.log(res);
+
+function getCharCount(str) {
+    var result,
+    count = 1,
+    i;
+
+    if (!str) {
+        return "";
+    }
+
+    result = str.charAt(0);
+    for (i = 1; i < str.length; i++) {
+        if (str.charAt(i) != str.charAt(i-1)) {
+            result += count + str.charAt(i);
+            count = 1;
+        } else {
+            count++;
+        }
+    }
+
+    return result + count;
+}
+
+console.log(getCharCount("aabbbcccccaa"));
