@@ -59,19 +59,19 @@ function compress(str) {
     let count = 1;
     let retStr = '';
 
-    /* while (count <= str.length) {
-        console.log(str.charAt(count));
-        count ++;
-    } */
-
     for (let index = 0; index < str.length; index++) {
         if (str.charAt(index) == str.charAt(index + count)) {
+            console.log("str.charAt(" + index + "): " + str.charAt(index) + "\tcount: " + count);
             count ++;
         }
         else {
+            console.log("retStr before: " + retStr);
             retStr += str.charAt(index) + count;
+            console.log("retStr after: " + retStr + "\n");
         }
     }
+
+    return retStr;
 }
 
-compress("aabbbcccccaa");
+console.log(compress("aabbbcccccaa"));
