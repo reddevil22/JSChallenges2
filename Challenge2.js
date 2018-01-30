@@ -8,3 +8,70 @@
  * 
  * Link to problem: https://kurtosys-prod-eng.atlassian.net/wiki/spaces/GRAD/pages/223871621/Challenge+1+-+Santa+s+Naughty+List
  */
+
+/* function getFrequency(string) {
+    var freq = {};
+    for (var i=0; i<string.length;i++) {
+        var character = string.charAt(i);
+        if (freq[character]) {
+           freq[character]++;
+        } else {
+           freq[character] = 1;
+        }
+    }
+
+    return freq;
+}
+
+function objToString (obj) {
+    var str = '';
+    for (var p in obj) {
+        if (obj.hasOwnProperty(p)) {
+            str += p + '' + obj[p];
+        }
+    }
+    return str;
+}
+
+console.log(objToString(getFrequency("aabbbcccccaa")));
+
+function compress(params) {
+    let str = "";
+
+    for (var i=0; i<params.length;i++) {
+
+    }
+}
+
+function decompress(str) {
+    return str.replace(/(\d+)([a-zA-A])/g, function (match, num, letter) {
+        var ret = '', i;
+        for (i = 0; i < parseInt(num, 10); i++) {
+            ret += letter;
+        }
+        return ret;
+    });
+}
+
+console.log(decompress("g2j2")); */
+
+function compress(str) {
+    let count = 1;
+    let retStr = '';
+
+    /* while (count <= str.length) {
+        console.log(str.charAt(count));
+        count ++;
+    } */
+
+    for (let index = 0; index < str.length; index++) {
+        if (str.charAt(index) == str.charAt(index + count)) {
+            count ++;
+        }
+        else {
+            retStr += str.charAt(index) + count;
+        }
+    }
+}
+
+compress("aabbbcccccaa");
