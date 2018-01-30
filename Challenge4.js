@@ -6,5 +6,65 @@
  * @param {children} Children list - The list of children to be checked.
  * @returns {newList} List containing every child who appeared on Santa's list.
  * 
- * Link to problem: https://kurtosys-prod-eng.atlassian.net/wiki/spaces/GRAD/pages/223871621/Challenge+1+-+Santa+s+Naughty+List
+ * https://kurtosys-prod-eng.atlassian.net/wiki/spaces/GRAD/pages/223871631/Challenge+4+-+Indexing+Searching
  */
+
+
+/* From https://www.consolelog.io/group-by-in-javascript */
+Array.prototype.groupBy = function(prop) {
+    return this.reduce(function(groups, item) {
+        var val = item[prop];
+        groups[val] = groups[val] || [];
+        groups[val].push(item);
+        return groups;
+    }, {});
+};
+
+function orchestrateUsers(users) {
+    let groupedUsers = users.groupBy("type");
+    return groupedUsers;
+}
+
+function searchUsers(orchestratedUsers, userTypes, property, value) {
+    // Add code here
+}
+
+let users = [
+    {
+        "name": "Joe",
+        "companyId": "A2100",
+        "type": "Admin"
+    },
+    {
+        "name": "Jane",
+        "companyId": "A2100",
+        "type": "Moderator"
+    },
+    {
+        "name": "Smith",
+        "companyId": "A2100",
+        "type": "User"
+    },
+    {
+        "name": "Smith",
+        "companyId": "A2100",
+        "type": "User"
+    },
+    {
+        "name": "Rocket",
+        "companyId": "A3100",
+        "type": "Admin"
+    },
+    {
+        "name": "Rick",
+        "companyId": "A3100",
+        "type": "User"
+    },
+    {
+        "name": "Tim",
+        "companyId": "A4100",
+        "type": "Admin"
+    }
+];
+
+console.log(orchestrateUsers(users));

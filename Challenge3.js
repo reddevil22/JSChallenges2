@@ -12,7 +12,7 @@ function showAveTime() {
     let fetch = require("node-fetch");
     let sum = 0;
 
-    for(let i = 1; i <= 100; i++)
+    for(let i = 1; i <= 20; i++)
     {
         let time = new Date().getTime();
         fetch('http://date.jsontest.com/').then(function(res) {
