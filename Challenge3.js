@@ -9,4 +9,11 @@
  * Link to problem: https://kurtosys-prod-eng.atlassian.net/wiki/spaces/GRAD/pages/223871627/Challenge+3+-+Quick+and+dirty+network+perf+calculator
  */
 
- 
+var fetch = require("node-fetch");
+
+fetch('http://date.jsontest.com/')
+    .then(function(res) {
+        return res.json();
+    }).then(function(json) {
+        console.log(json);
+});
