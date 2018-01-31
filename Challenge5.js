@@ -10,7 +10,28 @@
  */
 
 let fs = require('fs');
-let data1 = fs.readFileSync('data1.json', 'utf8');
-let data2 = fs.readFileSync('data2.json', 'utf8');
+
+let data1 = JSON.parse(fs.readFileSync('data1.json', 'utf8'));
+let data2 = JSON.parse(fs.readFileSync('data2.json', 'utf8'));
+
 console.log(data1);
 console.log(data2);
+
+/* let arr = [];
+
+for (let index1 = 0; index1 < data1.length; index1++) {
+
+    let shared = false;
+    for (let index2 = 0; index2 < data2.length; index2++) {
+        console.log(data2[index2]._id + " " + data1[index2]._id);
+        if (data2[index2]._id == data1[index2]._id) {
+            shared = true;
+            break;
+        }
+        
+    }
+    if (!shared) {
+        arr.push(data1[index1]);
+    }
+}
+arr = arr.concat(data2); */
