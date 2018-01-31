@@ -5,7 +5,8 @@
  * @param {obj} The nested array to be summmed
  * @returns {sum} The sum of all the 'total' attributes
  * 
- * Link to problem: https://kurtosys-prod-eng.atlassian.net/wiki/spaces/GRAD/pages/223839039/Challenge+6+-+Recursion
+ * Link to problem: https://kurtosys-prod-eng.atlassian.net/wiki/spaces/GRAD/pages/223839039/Challenge+6+-+Recursionexit
+ * 
  */
 
 let fs = require('fs');
