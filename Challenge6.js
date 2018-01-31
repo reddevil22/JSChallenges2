@@ -29,4 +29,4 @@ function sumValues(obj) {
     return sum;
 }
 
-console.log(sumValues(data));
+console.log("Sum of the recursive dive: " + sumValues(data));
