@@ -10,16 +10,11 @@
  */
 
 function compress(str) {
-    var retStr,
-    count = 1,
-    i;
-
-    if (!str) {
-        return "";
-    }
+    let retStr,
+    count = 1;
 
     retStr = str.charAt(0);
-    for (i = 1; i < str.length; i++) {
+    for (let i = 1; i < str.length; i++) {
         if (str.charAt(i) != str.charAt(i-1)) {
             retStr += count + str.charAt(i);
             count = 1;
@@ -33,14 +28,14 @@ function compress(str) {
 
 console.log("My method: " + compress("aabbbcccccaa"));
 
-var res = 'aabbbcccccaa'
+let res = 'aabbbcccccaa'
     .replace(/(.)\1*/g, function(m, $1) {
         return $1 + m.length;
     });
 console.log("Using regex: " + res);
 
 function decompress(str) {
-    var output = "";
+    let output = "";
     //encoded.forEach(function(pair){ output += new Array(1+pair[0]).join(pair[1]) })
 
     for (let i = 0; i < str.length; i++) {
