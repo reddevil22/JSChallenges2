@@ -1,0 +1,77 @@
+[
+	{
+		"_id": "5a6eddfbe8618d7e1eb4a0be",
+		"index": 0,
+		"guid": "63278b6a-1788-4019-8a78-aea40af5e635",
+		"isActive": true,
+		"balance": "$1,707.40",
+		"picture": "http://placehold.it/32x32",
+		"age": 39,
+		"eyeColor": "green",
+		"name": {
+			"first": "Blackwell",
+			"last": "Sawyer"
+		},
+		"company": "ROOFORIA"
+	},
+	{
+		"_id": "5a6eddfbfa1242db3d2f4dc4",
+		"index": 1,
+		"guid": "9a40bd1c-9cf5-4ab5-832d-09dbac2ae2fe",
+		"isActive": true,
+		"balance": "$2,833.82",
+		"picture": "http://placehold.it/32x32",
+		"age": 40,
+		"eyeColor": "brown",
+		"name": {
+			"first": "Letha",
+			"last": "Dodson"
+		},
+		"company": "GEEKY"
+	},
+	{
+		"_id": "5a6eddfb0b9894958bdb5a7c",
+		"index": 2,
+		"guid": "c853c131-8a96-4671-abe8-daeca557810c",
+		"isActive": false,
+		"balance": "$2,451.08",
+		"picture": "http://placehold.it/32x32",
+		"age": 31,
+		"eyeColor": "green",
+		"name": {
+			"first": "Candy",
+			"last": "Rivers"
+		},
+		"company": "FANGOLD"
+	},
+	{
+		"_id": "5a6eddfb7d04691e97a8818b",
+		"index": 3,
+		"guid": "14296317-16ed-47bf-bd24-7b69aab6cf41",
+		"isActive": false,
+		"balance": "$2,303.37",
+		"picture": "http://placehold.it/32x32",
+		"age": 36,
+		"eyeColor": "brown",
+		"name": {
+			"first": "Powers",
+			"last": "Hanson"
+		},
+		"company": "FUELTON"
+	},
+	{
+		"_id": "5a6eddfb06076212972ad0a8",
+		"index": 4,
+		"guid": "ef7f01fb-6cb8-40c5-aeed-199a754d63b1",
+		"isActive": false,
+		"balance": "$1,463.85",
+		"picture": "http://placehold.it/32x32",
+		"age": 27,
+		"eyeColor": "brown",
+		"name": {
+			"first": "Clark",
+			"last": "Barlow"
+		},
+		"company": "QUILITY"
+	}
+]
