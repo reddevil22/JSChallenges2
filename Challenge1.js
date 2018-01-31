@@ -16,7 +16,7 @@ function findChildren(santasList, children) {
             newList.push(santasList[index]);         // Adds element to new array if found in children and santasList
         }
     }
-    return newList;
+    return newList.sort();
 }
 
 let santasList = ["Tom","Errol","Sam","Peter","Jennifer"];
