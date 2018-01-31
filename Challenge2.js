@@ -36,8 +36,6 @@ console.log("Using regex: " + res);
 
 function decompress(str) {
     let output = "";
-    //encoded.forEach(function(pair){ output += new Array(1+pair[0]).join(pair[1]) })
-
     for (let i = 0; i < str.length; i++) {
         
         if(i % 2 == 0) {
